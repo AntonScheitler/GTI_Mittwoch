@@ -27,7 +27,6 @@
 ### Frage:
 
     Wieviele Transistoren wären in einer CMOS-Implementierung ohne Transmission-Gates, wie sie in der Vorlesung vorgestellt wird, notwendig?
-    *italic?*
 
 ### Antwort:
 
