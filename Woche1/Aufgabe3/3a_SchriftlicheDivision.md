@@ -12,7 +12,7 @@ B: 001110 (14)
 Wortbreite n = 6 -> A 12 bit (doppelte Wortbreite), B 6 bit (einfache Wortbreite)
 (festgelegt per A < (2<sup>n</sup>)B)
 
-B': 001110000000 (B um 2<sup>n</sup> nach links geshiftet)
+B': 001110000000 (B um n nach links geshiftet, d.h. Multiplikation mit 2<sup>n</sup>)
 -B':110010000000 (per Zweierkomplement)
 
 |     | Partialrest  | Quotient | Erläuterung   |
