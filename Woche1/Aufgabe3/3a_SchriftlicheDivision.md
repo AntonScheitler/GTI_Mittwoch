@@ -12,7 +12,7 @@
     Wortbreite n = 6 -> A 12 bit (doppelte Wortbreite), B 6 bit (einfache Wortbreite)
     (festgelegt per A < (2<sup>n</sup>)B)
 
-    B': 001110000000 (B um 2<sup>n</sup> nach links geshiftet)
+    B': 001110000000 (B um 2^n nach links geshiftet)
     -B':110010000000 (per Zweierkomplement)
 
     |     | Partialrest  | Quotient | Erläuterung   |
@@ -46,5 +46,4 @@
     R6 positiv, also kein Korrekturschritt nötig
 
     Quotient(=Q6): 100101 (=37)
-
-Rest (=2<sup>(-6)</sup>\*R6): 001000 (=8)
+    Rest (=(2^(-6))*R6): 001000 (=8)
