@@ -19,7 +19,7 @@
 
 ### Antwort:
 
-    8
+    8 = 2x Inverter + 2x Transmission Gate
     (2 pro Inverter und Transmission Gate)
 
 ## iii)
