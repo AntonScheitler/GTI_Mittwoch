@@ -30,6 +30,4 @@
 
 ### Antwort:
 
-    🛑XOR Beispiel aus der Vorlesung + 2 Transistoren für das Invertieren🛑
-
-`Vielleicht falsch`
+    XOR Beispiel aus der Vorlesung, also 12 Transistoren + 2 Transistoren für das Invertieren = 14 Transistoren
