@@ -33,5 +33,3 @@
     🛑XOR Beispiel aus der Vorlesung + 2 Transistoren für das Invertieren🛑
 
 `Vielleicht falsch`
-
-ich kann markdown :joy:
