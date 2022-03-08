@@ -10,3 +10,4 @@
 
     Für die Addition und Subtraktion werden reguläre Register benötigt.
     Für die Multiplikation und Division werden Schieberegister benötigt (für die Bitshifts)
+    Beispiel: 25 << 1 = 50; 25 >> 1 = 12
