@@ -20,6 +20,10 @@ Der Ausgang **Q<sub>1</sub>** liegt am Kontakt **LD<sub>0</sub>** an, wobei der 
 Mithilfe von JC kann ein **RS-Latch** erzeugt werden, indem der Kontakt **LD<sub>2</sub>** mit **S<sub>2</sub>** verknüpft wird. Außerdem müssen die Kontakte **LD<sub>3</sub>** und **R<sub>2</sub>** verknüpft werden. Set und Reset können sowohl zur rising- als auch falling-edge angesteuert werden. Der **Kontakt C** aus dem **Anschluss JD** dient hierbei als Takt.
 Der Ausgang **Q<sub>2</sub>** liegt am Kontakt **LD<sub>2</sub>** an, wobei der Ausgang **!Q<sub>2</sub>** am Kontakt **LD<sub>3</sub>** anliegt
 
+### JD
+
+Damit das **BTN<sub>2</sub> Signal** als Takt für den Rest der Schaltung verwendet werden kann, müssen die **Kontakte !!BTN<sub>2</sub> und C** verknüpft werden
+
 ### Tastenkombination
 
 Um das NAND-RS-Latch zurückzusetzen, muss das **BTN<sub>1</sub> Signal** gehalten werden, bis es mit der rising-, beziehungsweise falling-edge des **CLK Signals**, das Latch zurücksetzt.
