@@ -26,5 +26,4 @@ Damit das **BTN<sub>2</sub> Signal** als Takt für den Rest der Schaltung verwen
 
 ### Tastenkombination
 
-Um das NAND-RS-Latch zurückzusetzen, muss das **BTN<sub>1</sub> Signal** gehalten werden, bis es mit der rising-, beziehungsweise falling-edge des **CLK Signals**, das Latch zurücksetzt.
-Um danach das NOR-RS-Latch zurückzusetzen, muss das **BTN<sub>0</sub> Signal** gehalten werden, und währenddessen die rising-, beziehungsweise falling-edge des **BTN<sub>2</sub> Signals** aktiviert werden. Das Zurücksetzen des NOR-RS-Latches muss zudem während des HIGH, beziehungsweise LOW Zustands des **CLK Signals** erfolgen
+Um beide Latches zurückzusetzen, muss das **BTN<sub>1</sub> Singal** gehalten und das **BTN<sub>2</sub> Signal** aktiviert werden, bis die rising-, bezeihungsweise falling-edge des **CLK Signals** die Latches zurücksetzt
