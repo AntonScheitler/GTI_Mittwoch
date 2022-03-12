@@ -11,11 +11,11 @@ in der Schaltung von Abbildung 2 erfüllen
 
 ### G1
 
-G1 sorgt dafür, dass eine 1 nur ausgegeben wird, falls das **BTN<sub>2</sub> Signal** von 1 auf 0 wechselt **(FALLING EDGE)**
+G1 sorgt dafür, dass eine 1 nur ausgegeben wird, falls das **BTN<sub>2</sub> Signal** von 1 auf 0 wechselt **(FALLING EDGE, Knopf wird gedrückt)**
 
 ### G2
 
-G2 sorgt dafür, dass eine 1 nur ausgegeben wird, falls das **BTN<sub>2</sub> Signal** von 0 auf 1 wechselt **(RISING EDGE)**
+G2 sorgt dafür, dass eine 1 nur ausgegeben wird, falls das **BTN<sub>2</sub> Signal** von 0 auf 1 wechselt **(RISING EDGE, Knopf wird losgelassen)**
 
 ### G3
 
