@@ -10,4 +10,4 @@ Für das **RS-Latch mit NAND Gattern** werden die beiden **Eingaenge (R und S) n
 man kann also anhand der **zusaetzlichen Verzoegerung** den Typ bestimmen.
 Alternativ hierzu kann der Unterschied der beiden Latches anhand des illegalen Zustands erkannt werden:
 Beim **NOR-RS-Latch** ist der illegale Zustand **Q=0 und !Q=0**.
-beim **NAND-RS-Latch** ist der illegale Zustand **Q=1 und !Q=1**
+Beim **NAND-RS-Latch** ist der illegale Zustand **Q=1 und !Q=1**

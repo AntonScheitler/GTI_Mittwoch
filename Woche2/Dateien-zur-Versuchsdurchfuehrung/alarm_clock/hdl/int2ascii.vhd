@@ -35,10 +35,10 @@ BEGIN
 
 
             v_bcd1 := v_bcd1 * 2;
-            v_bcd1(0) := v_bcd1(3);
+            v_bcd1(0) := v_bcd0(3);
 
             v_bcd0 := v_bcd0 * 2;
-            v_bcd0(0) := v_number(7-i); -- 7 cause we dealing with indexes from 0 
+            v_bcd0(0) := v_number(8-i);
         END LOOP;
         s_bcd0 <= v_bcd0;
         s_bcd1 <= v_bcd1;
