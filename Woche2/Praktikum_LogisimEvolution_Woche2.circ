@@ -617,10 +617,6 @@
     <comp lib="4" loc="(540,320)" name="D Flip-Flop">
       <a name="appearance" val="classic"/>
     </comp>
-    <comp lib="6" loc="(382,140)" name="Text">
-      <a name="font" val="SansSerif plain 64"/>
-      <a name="text" val="BTNStrich Adden!"/>
-    </comp>
     <wire from="(110,170)" to="(110,260)"/>
     <wire from="(110,170)" to="(210,170)"/>
     <wire from="(110,260)" to="(120,260)"/>
