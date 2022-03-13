@@ -31,18 +31,19 @@ BEGIN
             end if;
             if v_bcd1 > 4 then
                 v_bcd1 := v_bcd1 + 3;
-            end if
+            end if;
 
 
-            v_bcd1 := v_bcd1 * 2;
+            v_bcd1 := left_shift(v_bcd1, 1);
             v_bcd1(0) := v_bcd0(3);
 
-            v_bcd0 := v_bcd0 * 2;
-            v_bcd0(0) := v_number(8-i);
+            v_bcd0 := left_shift(v_bcd0, 1);
+            v_bcd0(0) := v_number(7 - i); -- Laut Pseudocode: 8, aber 7 da A 0-indexed ist
+            ----------------------------
         END LOOP;
         s_bcd0 <= v_bcd0;
         s_bcd1 <= v_bcd1;
     END PROCESS;
-    o_ascii0 <= "0011"&v_bcd0; -- converting to 8 bits ascii
-    o_ascii1 <= "0011"&v_bcd1; -- converting to 8 bits ascii
+    o_ascii0 <= "0011" & s_bcd0; -- converting to 8 bits ascii
+    o_ascii1 <= "0011" & s_bcd1; -- converting to 8 bits ascii
 END ARCHITECTURE behavioral;
