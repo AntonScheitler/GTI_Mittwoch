@@ -9,5 +9,5 @@ Die zwei RS-Latches 𝑅𝑆1 und 𝑅𝑆2 aus Abbildung 2 unterscheiden sich i
 Für das **RS-Latch mit NAND Gattern** werden die beiden **Eingaenge (R und S) negiert** benoetigt,
 man kann also anhand der **zusaetzlichen Verzoegerung** den Typ bestimmen.
 Alternativ hierzu kann der Unterschied der beiden Latches anhand des illegalen Zustands erkannt werden:
-Beim **NOR-RS-Latch** ist der illegale Zustand **Q=0 und !Q=0**.
-Beim **NAND-RS-Latch** ist der illegale Zustand **Q=1 und !Q=1**
+Beim **NOR-RS-Latch** liefert der illegale Zustand (**s=r==c1**) **Q=0 und !Q=0**.
+Beim **NAND-RS-Latch** liefert der illegale Zustand (**s=r==c1**) **Q=1 und !Q=1**
