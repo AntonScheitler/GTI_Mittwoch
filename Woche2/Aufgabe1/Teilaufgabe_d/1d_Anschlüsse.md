@@ -26,7 +26,7 @@ Damit das **BTN<sub>2</sub> Signal** als Takt für den Rest der Schaltung verwen
 
 ### Latch-Verhalten bei C
 
-In dem oben gegebenen Aufbau, ist im C oder Takt der Latches **KEINE** Edge-Detection, das RS-Latch ist einfach nur Active High. Durch Verbinden von **C<sub>1</sub>** mit **E<sub>1</sub>** oder **E<sub>1</sub>** statt **!!BTN<sub>2</sub>**, würde eine Edge-Detection eingefügt werden, bei **E<sub>2</sub>** Rising-Edge und bei E<sub>3</sub> Falling-Edge.
+In dem oben gegebenen Aufbau, ist im C oder Takt der Latches **KEINE** Edge-Detection, das RS-Latch ist einfach nur Active High. Durch Verbinden von **C<sub>1</sub>** mit **E<sub>1</sub>** oder mit **E<sub>2</sub>** (statt **!!BTN<sub>3</sub>**), würde eine Edge-Detection eingefügt werden, bei verbindung mit **E<sub>2</sub>** Rising-Edge und bei E<sub>3</sub> Falling-Edge.
 
 ### Tastenkombination
 
