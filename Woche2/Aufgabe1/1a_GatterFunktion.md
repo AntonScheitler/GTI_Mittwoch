@@ -23,4 +23,4 @@ G3 sorgt dafür, dass eine 1 nur ausgegeben wird, falls das **CLK Signal** von 0
 
 ### G4
 
-G4 sorgt dafür, dass eine 1 nur ausgegeben wird, falls das **CLK Signal** von 1 auf 0 wechselt **(FALLING EDGE, Lnpf wird losgelassen)**
+G4 sorgt dafür, dass eine 1 nur ausgegeben wird, falls das **CLK Signal** von 1 auf 0 wechselt **(FALLING EDGE, Knopf wird losgelassen)**
