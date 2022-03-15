@@ -24,10 +24,6 @@ Der Ausgang **Q<sub>2</sub>** liegt am Kontakt **LD<sub>2</sub>** an, wobei der 
 
 Damit das **BTN<sub>2</sub> Signal** als Takt für den Rest der Schaltung verwendet werden kann, müssen die **Kontakte !!BTN<sub>2</sub> und C** verknüpft werden
 
-### Latch-Verhalten bei C
-
-In dem oben gegebenen Aufbau, ist im C oder Takt der Latches **KEINE** Edge-Detection, das RS-Latch ist einfach nur Active High. Durch Verbinden von **C<sub>1</sub>** mit **E<sub>1</sub>** oder mit **E<sub>2</sub>** (statt **!!BTN<sub>3</sub>**), würde eine Edge-Detection eingefügt werden, bei verbindung mit **E<sub>2</sub>** Rising-Edge und bei E<sub>3</sub> Falling-Edge.
-
 ### Tastenkombination
 
-Um beide Latches zurückzusetzen, muss das **BTN<sub>1</sub> Singal** gehalten und das **BTN<sub>2</sub> Signal** aktiviert werden, bis die rising-, bezeihungsweise falling-edge des **CLK Signals** die Latches zurücksetzt. 
+Um beide Latches zurückzusetzen, muss das **BTN<sub>1</sub> Singal** gehalten und das **BTN<sub>2</sub> Signal** aktiviert werden, bis die rising-, bezeihungsweise falling-edge des **CLK Signals** die Latches zurücksetzt.
