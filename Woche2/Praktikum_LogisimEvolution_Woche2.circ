@@ -571,6 +571,7 @@
       <a name="label" val="BTN_1"/>
     </comp>
     <comp lib="1" loc="(180,280)" name="XOR Gate"/>
+    <comp lib="1" loc="(330,280)" name="Buffer"/>
     <comp lib="1" loc="(340,190)" name="AND Gate">
       <a name="inputs" val="3"/>
       <a name="negate0" val="true"/>
@@ -623,7 +624,7 @@
     <wire from="(110,300)" to="(110,390)"/>
     <wire from="(110,300)" to="(120,300)"/>
     <wire from="(110,390)" to="(200,390)"/>
-    <wire from="(180,280)" to="(480,280)"/>
+    <wire from="(180,280)" to="(310,280)"/>
     <wire from="(200,160)" to="(200,200)"/>
     <wire from="(200,200)" to="(200,230)"/>
     <wire from="(200,200)" to="(300,200)"/>
@@ -668,6 +669,7 @@
     <wire from="(220,360)" to="(220,400)"/>
     <wire from="(220,360)" to="(310,360)"/>
     <wire from="(220,400)" to="(550,400)"/>
+    <wire from="(330,280)" to="(480,280)"/>
     <wire from="(340,190)" to="(370,190)"/>
     <wire from="(340,220)" to="(370,220)"/>
     <wire from="(340,250)" to="(370,250)"/>
