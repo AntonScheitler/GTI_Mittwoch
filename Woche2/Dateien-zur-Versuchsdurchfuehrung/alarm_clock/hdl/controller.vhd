@@ -73,7 +73,7 @@ begin
       end loop;
 
       -- TODO: Zaehle Uhr hoch
-      if sectriger = '1' then
+      if sectrigger = '1' then
         secs <= secs + 1;
         if secs >= 59 then
           secs <= 0;

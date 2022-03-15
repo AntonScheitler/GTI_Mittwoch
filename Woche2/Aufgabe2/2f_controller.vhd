@@ -87,15 +87,15 @@ begin
 
       -- TODO: Zaehle Uhr hoch
       if sectrigger = '1' then
-        v_secs := (v_secs + 1);
-        if v_secs = 60 then
-          v_secs := 0;
-          v_mins := (v_mins + 1);
-          if v_mins = 60 then
-            v_mins := 0;
-            v_hours := (v_hours + 1);
-            if v_hours = 24 then
-              v_hours := 0;
+        secs <= secs + 1;
+        if secs >= 59 then
+          secs <= 0;
+          mins <= mins + 1;
+          if mins >= 59 then
+            mins <= 0;
+            hours <= hours + 1;
+            if hours >= 23 then
+              hours <= 0;
             end if;
           end if;
         end if;
