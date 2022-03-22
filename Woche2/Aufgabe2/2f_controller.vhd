@@ -57,8 +57,6 @@ begin
 
   FSM : process(clk, reset)
     variable next_state : state_type;
-    variable v_secs, v_mins, v_wmins : integer RANGE 0 TO 60;
-    variable v_hours, v_whours : integer RANGE 0 TO 24;
   begin
     if reset = '1' then
       hours  <= 0;
@@ -68,39 +66,29 @@ begin
       wmins  <= 0;
       alarm  <= '0';
       current_state <= NTIME;
-      v_hours  := 0;
-      v_mins   := 0;
-      v_secs   := 0;
-      v_whours := 0;
-      v_wmins  := 0;
     elsif clk'event and clk = '1' then
       for i in 0 to 3 loop
         btn_shift(i) <= btn(i);
         btn_triggered(i) <= not btn_shift(i) and btn(i);
       end loop;
 
-      v_hours  := hours;
-      v_mins   := mins;
-      v_secs   := secs;
-      v_whours := whours;
-      v_wmins  := wmins;
-
       -- TODO: Zaehle Uhr hoch
-      v_secs := (v_secs + 1);
-        if v_secs = 60 then
-          v_secs := 0;
-          v_mins := (v_mins + 1);
-          if v_mins = 60 then
-            v_mins := 0;
-            v_hours := (v_hours + 1);
-            if v_hours = 24 then
-              v_hours := 0;
+      if sectrigger = '1' then
+        secs <= secs + 1;
+        if secs >= 59 then
+          secs <= 0;
+          mins <= mins + 1;
+          if mins >= 59 then
+            mins <= 0;
+            hours <= hours + 1;
+            if hours >= 23 then
+              hours <= 0;
             end if;
           end if;
         end if;
       end if;
       -- TODO: Pruefe, ob Alarm ausgeloest werden muss
-      if v_hours = v_whours and v_mins = v_wmins and sw(0) = '1' then
+      if hours = whours and mins = wmins and sw(0) = '1' then
         alarm <= '1';
       else
         alarm <= '0';
@@ -124,17 +112,19 @@ begin
             next_state := SET_ALARM;
           end if;
           -- TODO: Setze Minute und Stunde mit BTN(2) bzw. BTN(3)
-          if btn_triggered(2) = '1' then
-            v_mins := (v_mins + 1);
-            if v_mins = 60 then
-              v_mins := 0;
+          if btn_triggered(2) = '1' then -- oder btn(2) = 1 and fasttrigger = 1,
+                                         -- Um schnelleres Uhrstellen durch
+                                         -- gedrückt halten zu ermöglichen
+            mins <= mins + 1;
+            if mins >= 59 then
+              mins <= 0;
             end if;
           end if;
           -- Hours: 
           if btn_triggered(3) = '1' then
-            v_hours := (v_hours + 1);
-            if v_hours = 24 then
-              v_hours := 0;
+            hours <= hours + 1;
+            if hours > 23 then
+              hours <= 0;
             end if;
           end if;
 
@@ -147,17 +137,19 @@ begin
             next_state := NTIME;
           end if;
           -- TODO: Setze Minute und Stunde mit BTN(2) bzw. BTN(3)
-          if btn_triggered(2) = '1' then
-            v_wmins := (v_wmins + 1);
-            if v_wmins = 60 then
-              v_wmins := 0;
+          if btn_triggered(2) = '1' then -- oder btn(2) = 1 and fasttrigger = 1,
+                                         -- Um schnelleres Uhrstellen durch
+                                         -- gedrückt halten zu ermöglichen
+            wmins <= wmins + 1;
+            if wmins >= 59 then
+              wmins <= 0;
             end if;
           end if;
           -- Hours: 
           if btn_triggered(3) = '1' then
-            v_whours := (v_whours + 1);
-            if v_whours = 24 then
-              v_whours := 0;
+            whours <= whours + 1;
+            if whours >= 23 then
+              whours <= 0;
             end if;
           end if;
         -- Illegale Zustaende
@@ -166,11 +158,6 @@ begin
       end case;
 
       current_state <= next_state;
-      secs <= v_secs;
-      mins <= v_mins;
-      hours <= v_hours;
-      wmins <= v_wmins;
-      whours <= v_whours;
     end if;
   end process FSM;
 
